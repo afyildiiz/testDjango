@@ -81,10 +81,11 @@ a:hover{
 }
 
 .nav > .nav-links {
-  display: flex;
-  /* display: inline;
+  /* display: flex; */
+  display: block;
+  /* display: inline; */
   float: right;
-  font-size: 18px; */
+  font-size: 18px;
   justify-content: center;
   /* margin-left: 40px; */
 }

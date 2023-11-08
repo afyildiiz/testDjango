@@ -7,7 +7,9 @@ from movie import views
 urlpatterns = [
     path("", views.getHomepage, name='homepage'),
     path("home/", views.getHomepage, name='homepage'),
-    path("add/", views.goFormPage, name='add',),
+    path("add/", views.add_movie, name='add',),
     path("__debug__/", include("debug_toolbar.urls")),
+    # path('add_movie/', views.add_movie, name='add_movie'),
+    path("delete/<int:id>", views.delete_movie, name='delete')
     
 ]

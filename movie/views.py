@@ -1,4 +1,5 @@
 from datetime import timezone
+from django.http import HttpResponse
 from django.shortcuts import redirect, render
 
 from .forms import AddMovies
@@ -19,6 +20,13 @@ def add_movie(request):
     else:
         form = AddMovies()
     return render(request, templateName, {'form': form})
+
+
+def delete_movie(request,id):
+        movie=Movies.objects.get(pk=id)
+        movie.delete()
+        return redirect('homepage')
+
 
 def getHomepage(request):
     data={
