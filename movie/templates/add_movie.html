@@ -1,0 +1,34 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+{% load crispy_forms_tags %}
+<!-- {% block content %} -->
+
+<div class="container">
+
+    <form method="POST" action="{% url 'add' %}" class="form">
+        {% csrf_token %}
+    {{ form|crispy }}
+    <!-- <div class="row">
+        <div class="col-6">
+            {{ form.movie_name|as_crispy_field }}
+        </div>
+        <div class="col-6">
+            {{ form.movie_category|as_crispy_field }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+        {{ form.movie_desc|as_crispy_field }}
+        </div>
+        <div class="col-6">
+            {{ form.in_homepage|as_crispy_field }}
+        </div>
+    </div> -->
+    <button type="submit" name="save" class="btn btn-primary">Create Movie</button>
+</form>
+<!-- {% endblock %} -->
+</div>
+
