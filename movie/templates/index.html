@@ -25,6 +25,7 @@
             <th>Category</th>
             <th>Description</th>
             <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
@@ -35,6 +36,7 @@
                 <td>{{movie.movie_category}}</td>
                 <td>{{movie.movie_desc}}</td>
               <td><a href="{%url 'delete' id=movie.id %}">Delete</a></td>
+              <td><a href="{%url 'update' id=movie.id %}">Update</a></td>
             </tr>
             {%endif%}
             {% endfor%}
